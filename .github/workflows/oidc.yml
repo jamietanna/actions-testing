@@ -19,5 +19,5 @@ jobs:
           const coredemo = require('@actions/core')
           let id_token = await coredemo.getIDToken()
           coredemo.setOutput('id_token', id_token)
-          console.log(process.env('ACTIONS_ID_TOKEN_REQUEST_URL'))
+          console.log(process.env)
 
