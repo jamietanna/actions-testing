@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@e2f20e631ae6d7dd3b768f56a5d2af784dd54791
 
       - name: Self-hosted Renovate
-        uses: renovatebot/github-action@ce404b2504f00817a4cc3bc42262df9ce3d5476b
+        uses: jamietanna/github-action@d29f0c91898acf59ab4321dd851297787f300aca
         with:
           configurationFile: config.js
           token: 'x-access-token:${{ secrets.PAT }}'
