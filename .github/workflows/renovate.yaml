@@ -1,0 +1,37 @@
+name: Renovate
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/cache@v3
+        id: baseDir
+        with:
+          # managed in config.js
+          path: /tmp/renovate-baseDir
+          key: renovate-baseDir-${{ runner.os }}
+          restore-keys: renovate-baseDir-${{ runner.os }}
+
+      - uses: actions/cache@v3
+        id: cacheDir
+        with:
+          # managed in config.js
+          path: /tmp/renovate-cacheDir
+          key: renovate-cacheDir-${{ runner.os }}
+
+      - name: run
+        run: |
+          ls -al /tmp/renovate*
+          chmod 777 /tmp/renovate* -R # TODO raise
+
+      - name: Checkout
+        uses: actions/checkout@e2f20e631ae6d7dd3b768f56a5d2af784dd54791
+
+      - name: Self-hosted Renovate
+        uses: renovatebot/github-action@ce404b2504f00817a4cc3bc42262df9ce3d5476b
+        with:
+          configurationFile: config.js
+          token: 'x-access-token:${{ secrets.PAT }}'
