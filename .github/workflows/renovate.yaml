@@ -25,7 +25,7 @@ jobs:
 
       - name: run
         run: |
-          ls -al /tmp/renovate*
+          ls -al /tmp/renovate* || true
           chmod 777 /tmp/renovate* -R # TODO raise
 
       - name: Checkout
