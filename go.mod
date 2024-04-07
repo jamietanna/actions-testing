@@ -1,6 +1,6 @@
 module foo
 
-go 1.22.1
+go 1.22.2
 
 require dmd.tanna.dev v0.40.0
 
