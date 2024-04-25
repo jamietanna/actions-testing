@@ -2,7 +2,7 @@ module foo
 
 go 1.22.1
 
-require dmd.tanna.dev v0.40.0
+require dmd.tanna.dev v0.94.3
 
 require (
 	github.com/CycloneDX/cyclonedx-go v0.8.0 // indirect
@@ -42,7 +42,7 @@ require (
 	github.com/xanzy/go-gitlab v0.95.2 // indirect
 	github.com/xeipuuv/gojsonpointer v0.0.0-20190905194746-02993c407bfb // indirect
 	gitlab.com/tanna.dev/endoflife-checker v0.7.0 // indirect
-	golang.org/x/crypto v0.17.0 // indirect
+	golang.org/x/crypto v0.18.0 // indirect
 	golang.org/x/exp v0.0.0-20231006140011-7918f672742d // indirect
 	golang.org/x/mod v0.13.0 // indirect
 	golang.org/x/oauth2 v0.13.0 // indirect
