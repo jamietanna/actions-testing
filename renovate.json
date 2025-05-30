@@ -1,4 +1,8 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"branchConcurrentLimit": 300
+	"branchConcurrentLimit": 300,
+	"baseBranches": [
+		"$default",
+		"other"
+	]
 }
