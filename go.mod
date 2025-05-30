@@ -2,7 +2,7 @@ module foo
 
 go 1.22.1
 
-require dmd.tanna.dev v0.40.0
+require dmd.tanna.dev v0.117.0
 
 require (
 	github.com/CycloneDX/cyclonedx-go v0.8.0 // indirect
