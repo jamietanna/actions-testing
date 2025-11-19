@@ -1,0 +1,9 @@
+on:
+  push: {}
+
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Action Run: https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/job/$GITHUB_JOB"
