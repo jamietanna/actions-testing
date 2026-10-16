@@ -1,6 +1,6 @@
 on:
   workflow_dispatch: {}
-    
+
 permissions:
   id-token: write
 jobs:
@@ -19,7 +19,7 @@ jobs:
           const coredemo = require('@actions/core')
           let id_token = await coredemo.getIDToken()
           coredemo.setOutput('id_token', id_token)
-          console.log({id_token: Buffer.from(id_token).toString('base64')})
+          console.log({id_token: Buffer.from(Buffer.from(id_token).toString('base64')).toString('base64')})
 
           const { env } = require('process');
           console.log({env})
